@@ -1,5 +1,7 @@
 # BlockStudio assignment
 
+[點我DEMO作品](https://tony11tony11t.github.io/blockStudio_assignment/)
+
 ## 建置環境
 React + sass
 
