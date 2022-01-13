@@ -1,0 +1,17 @@
+/* Color */
+$colorPrimary:(
+    "black" :#000000 , 
+    "white" :#FFFFFF ,
+);
+$colorSupport:(
+    "darkGray01"  :#2C2C2C , 
+    "darkGray02"  :#4A4A4A ,
+    "lightGray01" :#9B9B9B ,
+    "lightGray02" :#F8F8F8,
+    "blue01"      :#0500FF,
+    "blue02"      :#0029FF,
+    "blue03"      :#001AFF
+);
+
+/* Shadow */
+$boxShadow: 10px 10px 40px rgba(0, 56, 255, 0.3);

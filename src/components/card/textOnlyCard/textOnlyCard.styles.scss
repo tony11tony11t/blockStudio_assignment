@@ -1,0 +1,72 @@
+@import "../../../styles/variables";
+
+.textOnlyCard{
+    &__container{
+        border:1px solid map-get($colorSupport, "lightGray01" );
+    }
+    
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px 27px;
+        height: 388px;
+
+        &__body{
+            display: flex;
+            flex-direction: column;
+
+            &::before{
+                content: "";
+                display: block;
+                width: 19px;
+                height: 3px;
+                background-color: map-get($colorPrimary, "black" );
+                margin-bottom: 17px;
+            }
+        }
+
+        &-arrow{
+            border-bottom:1px solid map-get($colorSupport, "DarkGray02" );
+            width: 27px;
+            margin-top: 10px;
+            align-self: flex-end;
+
+            &::after{
+                content: "";
+                display: block;
+                height: 7px;
+                border-right:1px solid map-get($colorSupport, "DarkGray02" );
+                transform: rotate(-45deg);
+                transform-origin: bottom right;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .textOnlyCard{
+
+        &__content{
+            height: 93px;
+            padding: 10px 20px 20px 20px;
+
+            &__body{
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                &::before{
+                    margin-bottom: 0;
+                }
+
+                p{
+                    display: none;
+                }
+            }
+            &-arrow{
+                margin-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import "../../styles/variables";
+
+.header{
+    &__container{
+        width: 100%;
+        height:50px;
+        padding-left: 43px;
+        padding-right: 95px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-logo{
+            width: 25px;
+            height: 47px;
+            path{
+                &:nth-child(1){
+                    stroke  : map-get($colorPrimary , 'black');
+                }
+                fill    : map-get($colorPrimary , 'black');
+            }
+        }
+
+        &-nav{
+            a{
+                padding: 4.5px 30px;
+                cursor: pointer;
+                &.link-selected{
+                    border:solid 2px map-get($colorSupport , 'blue02');
+                    color:map-get($colorSupport , 'blue01');
+                }
+                &:hover{
+                    color:map-get($colorSupport , 'blue01');
+                    
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .header{
+        &__container{
+            padding-right: 0;
+            height: auto;
+        }
+
+        &__content{
+            &-logo{
+                align-self: flex-end;
+            }
+            &-nav{
+                display: none;
+            }
+        }
+    }
+}

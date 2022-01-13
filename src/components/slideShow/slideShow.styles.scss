@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+
+
+.slideShow{
+    &__container{
+        width: 100%;
+        height: 780px;
+        position: absolute;
+        overflow-x: hidden;
+    }
+    &__content{
+        width:300%;
+        height: 100%;
+        display: flex;
+
+        &-slide{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 33.333%;
+            transition: all 2s;
+            height: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width :1200px) {
+    .slideShow{
+        &__container{
+            height: 640px;
+        }
+    }
+}
