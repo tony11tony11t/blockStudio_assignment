@@ -15,6 +15,9 @@
 
         &.show{
             background-color: map-get($colorSupport , 'darkGray01');
+            position: fixed;
+            top: 0;
+            right: 0;
 
             &>div{
                 transform: rotate(45deg);
@@ -66,7 +69,7 @@
 
     &__content{
         display: flex;
-        position: absolute;
+        position: fixed;
         background-color: map-get($colorSupport , 'darkGray01');
         color: map-get($colorPrimary , 'white');
         width: 100%;

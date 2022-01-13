@@ -27,7 +27,7 @@ function App() {
     },
     width : 39,
     height: 39,
-    level : 100
+    level : 30
   },{
     pos : {
       top:'2619px',

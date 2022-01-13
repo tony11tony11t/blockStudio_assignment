@@ -10,7 +10,10 @@ export default function MobileNav() {
 
     const handleClick = () => {
         setVisible(!visible);
+        !visible ? document.body.classList.add('mobileNavOpen') : document.body.classList.remove('mobileNavOpen');
     }
+
+    
 
     return (
         <div className='mobileNav__container'>
