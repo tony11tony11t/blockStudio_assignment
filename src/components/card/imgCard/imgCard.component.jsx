@@ -12,7 +12,7 @@ function ImgCard({style} , ref) {
 
     }
     return (
-        <div className='imgCard__container' style={style} ref={ref}>
+        <div className='imgCard__container' style={style} ref={ref} data-aos={`${window.innerWidth > 1200 ? "flip-left" : "fade-right"}`}>
             <div className='imgCard__content'>
                 <div className="imgCard__content__img" style={{
                     backgroundImage:`url(${chooseImg()})`

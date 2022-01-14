@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import './mobileNav.styles.scss'
-import  { ReactComponent as FacebookIcon } from '../../../assets/facebook.svg'
-import  { ReactComponent as InstagramIcon } from '../../../assets/instagram.svg'
-import  { ReactComponent as YoutubeIcon } from '../../../assets/youtube.svg'
+import SocialLink from '../../socialLink/socialLink.component'
 
 export default function MobileNav() {
 
@@ -31,9 +29,7 @@ export default function MobileNav() {
                         E. info@blockstudio.tw<br/>
                         3F., No.2, Ln. 80, Sec. 4, Chengde Rd., Shilin Dist., Taipei City 111, Taiwan</p>
                         <div className='mobileNav__content__socialLink'>
-                            <FacebookIcon />
-                            <InstagramIcon />
-                            <YoutubeIcon />
+                            <SocialLink color="white"/>
                         </div>
                 </div>
             </div>

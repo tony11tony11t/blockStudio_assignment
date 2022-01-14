@@ -3,66 +3,65 @@
 
 .home{
     &__container{
-        width: 100%;
-        margin-bottom: 120px;
+        margin-bottom   : 120px;
     }
     &__content{
-        width: 80%;
-        max-width: 800px;
-        margin: auto;
-        text-align: left;
+        width           : 80%;
+        max-width       : 800px;
+        margin          : auto;
+        text-align      : left;
 
         &-title{
-            border: 1px solid map-get($colorSupport , "lightGray01");
-            background-color: map-get($colorPrimary , "white");
-            height: 120px;
-            max-width: 700px;
-            width: 80%;
-            position: relative;
-            transform: translateY(-50%);
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            align-items:center;
+            border              : 1px solid map-get($colorSupport , "lightGray01");
+            background-color    : map-get($colorPrimary , "white");
+            height              : 120px;
+            max-width           : 700px;
+            width               : 80%;
+            position            : relative;
+            transform           : translateY(-50%);
+            display             : flex;
+            justify-content     : center;
+            margin              : auto;
+            align-items         : center;
 
             &::after{
-                content: "";
-                background-color: map-get($colorPrimary , "white");
-                display: block;
-                position: absolute;
-                right:0px;
-                bottom: -1px;
-                width: #{math.hypot(40,40)}px;
-                height: 40px;
-                border-top:1px solid map-get($colorSupport , "lightGray01");
-                transform-origin: top right;
-                transform: rotate(-45deg);
+                content             : "";
+                background-color    : map-get($colorPrimary , "white");
+                display             : block;
+                position            : absolute;
+                right               : 0px;
+                bottom              : -1px;
+                width               : #{math.hypot(40,40)}px;
+                height              : 40px;
+                border-top          : 1px solid map-get($colorSupport , "lightGray01");
+                transform-origin    : top right;
+                transform           : rotate(-45deg);
             }
             
         }
 
         p{
-            margin-bottom: 20px;
+            margin-bottom   : 20px;
         }
     }
 }
 
-@media only screen and (max-width :1200px){
+@include mobile {
     .home{
         &__container{
-            margin-bottom: 30px;
+            margin-bottom   : 30px;
         }
 
         &__content{
             &-title{
-                height: 60px;
+                height  : 60px;
 
                 &::after{
-                    width: #{math.hypot(20,20)}px;
-                    height: 20px;
-                    border-top:1px solid map-get($colorSupport , "lightGray01");
-                    transform-origin: top right;
-                    transform: rotate(-45deg);
+                    width               : #{math.hypot(20,20)}px;
+                    height              : 20px;
+                    border-top          : 1px solid map-get($colorSupport , "lightGray01");
+                    transform-origin    : top right;
+                    transform           : rotate(-45deg);
                 }
             }
 

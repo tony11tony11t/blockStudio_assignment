@@ -1,9 +1,14 @@
+@import "../../../styles/variables";
+
 .video{
+    &__container{
+        margin-bottom : 121px;
+    }
+
     &__content{
-        width: 80%;
-        margin: auto;
-        max-width: 1200px;
-        position: relative;
+        width       : 80%;
+        margin      : auto;
+        max-width   : 1200px;
 
         img{
             width: 100%;
@@ -11,10 +16,10 @@
     }
 }
 
-@media only screen and (max-width : 1200px) {
+@include mobile  {
     .video{
         &__content{
-            width: 90%;
+            width   : 90%;
         }
     }
 }

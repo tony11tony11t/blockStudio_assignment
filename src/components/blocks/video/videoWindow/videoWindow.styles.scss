@@ -2,77 +2,77 @@
 
 .videoWindow{
     &__container{
-        position: fixed;
-        background-color: rgba(0,0,0,0.6);
-        width:100vw;
-        height:100vh;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        display: block;
+        position            : fixed;
+        background-color    : rgba(0,0,0,0.6);
+        width               : 100vw;
+        height              : 100vh;
+        top                 : 0;
+        left                : 0;
+        z-index             : 100;
+        display             : block;
 
         &.hide{
-            display: none;
+            display : none;
         }
     }
     &__content{
-        position: fixed;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        width: 80%;
-        height: 80%;
-        max-width: 1200px;
+        position    : fixed;
+        top         : 50%;
+        left        : 50%;
+        transform   : translate(-50%,-50%);
+        width       : 80%;
+        height      : 80%;
+        max-width   : 1200px;
 
         &-close{
-            width: 100%;
-            height: 15px;
-            position: relative;
-            cursor: pointer;
+            width       : 100%;
+            height      : 15px;
+            position    : relative;
+            cursor      : pointer;
 
             &::before{
-                content: "";
-                display: block;
-                width: 13.75px;
-                height: 1px;
-                background-color: map-get($colorPrimary , "white" );
-                transform: rotate(45deg);
-                position: absolute;
-                right: 0;
+                content             : "";
+                display             : block;
+                width               : 13.75px;
+                height              : 1px;
+                background-color    : map-get($colorPrimary , "white" );
+                transform           : rotate(45deg);
+                position            : absolute;
+                right               : 0;
             }
             &::after{
-                content: "";
-                display: block;
-                width: 13.75px;
-                height: 1px;
-                background-color: map-get($colorPrimary , "white" );
-                transform: rotate(-45deg);
-                position: absolute;
-                right: 0;
+                content             : "";
+                display             : block;
+                width               : 13.75px;
+                height              : 1px;
+                background-color    : map-get($colorPrimary , "white" );
+                transform           : rotate(-45deg);
+                position            : absolute;
+                right               : 0;
             }
         }
         &-video{
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
+            position        : relative;
+            padding-bottom  : 56.25%; /* 16:9 */
+            height          : 0;
 
             iframe{
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
+                position    : absolute;
+                top         : 0;
+                left        : 0;
+                width       : 100%;
+                height      : 100%;
             }
         }
     }
 }
 
-@media only screen and (max-width :1200px) {
+@include mobile  {
     .videoWindow{
         &__content{
             &-video{
-                top: 50%;
-                transform: translateY(-50%);
+                top         : 50%;
+                transform   : translateY(-50%);
             }
         }
     }

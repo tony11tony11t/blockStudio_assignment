@@ -1,8 +1,8 @@
 @import "../../styles/variables";
 
 .parallax-content{
-    position: absolute;
-    box-shadow: $boxShadow;
-    border-radius: 9999px;
-    background-color: map-get($colorSupport, "blue03");
+    position            : absolute;
+    box-shadow          : $boxShadow;
+    border-radius       : 9999px;
+    background-color    : map-get($colorSupport, "blue03");
 }

@@ -2,123 +2,120 @@
 
 .mobileNav{
     &__container{
-        display: none;
+        display : none;
     }
 
     &-button{
-        width: 70px;
-        height: 70px;
-        background-color: map-get($colorPrimary , 'black');
-        position: relative;
-        cursor: pointer;
-        z-index: 20;
+        width               : 70px;
+        height              : 70px;
+        background-color    : map-get($colorPrimary , 'black');
+        position            : absolute;
+        cursor              : pointer;
+        z-index             : 20;
+        top                 : 0;
+        right               : 0;
 
         &.show{
-            background-color: map-get($colorSupport , 'darkGray01');
-            position: fixed;
-            top: 0;
-            right: 0;
+            background-color    : map-get($colorSupport , 'darkGray01');
+            position            : fixed;
+            top                 : 0;
+            right               : 0;
 
             &>div{
-                transform: rotate(45deg);
+                transform   : rotate(45deg);
 
                 &::before{
-                    transform: translateY(-8px);
+                    transform   : translateY(-8px);
                 }
                 &::after{
-                    transform: rotate(-90deg) translate(6px,8px);
-                    transform-origin: top left; 
+                    transform           : rotate(-90deg) translate(6px,8px);
+                    transform-origin    : top left; 
                 }
             }
         }
 
         &>div{
-            position: absolute;
-            top: 50%;
-            left:50%;
-            transform: translate(-50%,-8px);
-            width: 18px;
-            height: 1px;
-            background-color: map-get($colorPrimary , 'white');
-            transition: all 0.5s;
+            position            : absolute;
+            top                 : 50%;
+            left                : 50%;
+            transform           : translate(-50%,-8px);
+            width               : 18px;
+            height              : 1px;
+            background-color    : map-get($colorPrimary , 'white');
+            transition          : all 0.5s;
             
             &::before{
-                content: "";
-                display: block;
-                width: 18px;
-                height: 1px;
-                background-color: map-get($colorPrimary , 'white');
-                position: relative;
-                top: 8px;
-                transition: all 0.5s;
+                content             : "";
+                display             : block;
+                width               : 18px;
+                height              : 1px;
+                background-color    : map-get($colorPrimary , 'white');
+                position            : relative;
+                top                 : 8px;
+                transition          : all 0.5s;
             }
 
             &::after{
-                content: "";
-                display: block;
-                width: 18px;
-                height: 1px;
-                background-color: map-get($colorPrimary , 'white');
-                position: relative;
-                transform-origin: top left; 
-                top: 15px;
-                transition: all 0.5s;
+                content             : "";
+                display             : block;
+                width               : 18px;
+                height              : 1px;
+                background-color    : map-get($colorPrimary , 'white');
+                position            : relative;
+                transform-origin    : top left; 
+                top                 : 15px;
+                transition          : all 0.5s;
             }
         }
     }
 
     &__content{
-        display: flex;
-        position: fixed;
-        background-color: map-get($colorSupport , 'darkGray01');
-        color: map-get($colorPrimary , 'white');
-        width: 100%;
-        left: 100%;
-        top: 0;
-        height: 100vh;
-        z-index: 10;
-        flex-direction: column;
-        text-align: left;
-        justify-content: flex-end;
-        transition: all 0.5s;
+        display             : flex;
+        position            : fixed;
+        background-color    : map-get($colorSupport , 'darkGray01');
+        color               : map-get($colorPrimary , 'white');
+        width               : 100%;
+        left                : 100%;
+        top                 : 0;
+        height              : 100vh;
+        z-index             : 10;
+        flex-direction      : column;
+        text-align          : left;
+        justify-content     : flex-end;
+        transition          : all 0.5s;
 
         &.show{
-            left: 0;
+            left    : 0;
         }
 
         &-nav{
-            margin-left: 40px;
-            margin-bottom: 60px;
+            margin-left     : 40px;
+            margin-bottom   : 60px;
             a{
                 h5{
-                    margin-bottom: 60px;
+                    margin-bottom   : 60px;
                 }
             }
         }
 
         &__footer{
-            height: 226px;
-            background-color: map-get($colorPrimary , 'black');
-            padding: 42px 40px;
+            height              : 226px;
+            background-color    : map-get($colorPrimary , 'black');
+            padding             : 42px 40px;
+            display             : flex;
+            flex-direction      : column;
         }
 
         &__socialLink{
-            margin-top: 30px;
-            svg{
-                margin-right: 42px;
-
-                path{
-                    fill:map-get($colorPrimary , 'white');
-                }
-            }
+            margin-top          : auto;
         }
     }
 }
 
-@media only screen and (max-width : 1200px) {
+@include mobile  {
     .mobileNav{
         &__container{
-            display: block;
+            display : block;
         }
     }
 }

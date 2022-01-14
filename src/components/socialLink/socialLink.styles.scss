@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+
+
+.socialLink{
+    &__content{
+        display : flex;
+
+        svg{
+            margin-right    : 35px;
+            margin-left     : 35px;
+
+            &:first-child{
+                margin-left : 0px;
+            }
+
+            &:last-child{
+                margin-right : 0px;
+            }
+        }
+
+        &.color-white{
+            path{
+                fill : map-get($colorPrimary , 'white');
+            }
+        }
+    }
+}

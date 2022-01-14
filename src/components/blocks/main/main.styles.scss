@@ -2,87 +2,79 @@
 
 .main{
     &__container{
-        width: 100%;
-        height: 780px;
+        width   : 100%;
+        height  : $mainHeight;
     }
 
     &__content{
-        padding-top: 24px;
-        text-align: center;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        position: relative;
+        position        : relative;
+        padding-top     : 24px;
+        text-align      : center;
+        height          : 100%;
+        display         : flex;
+        flex-direction  : column;
+        padding-left    : 40px;
+        padding-right   : 95px;
 
         &__title{
-            padding-left: 40px;
-            padding-right: 40px;
-            margin: auto;
+            margin  : auto;
 
             h1{
-                max-width: 1040px;
+                max-width   : 1040px;
             }
 
             p{
-                max-width: 750px;
-                margin: auto;
-                margin-top: 28px;
+                max-width   : 750px;
+                margin      : 28px auto;
             }
 
             &-slideshow{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                margin-top: 44px;
+                display         : flex;
+                flex-direction  : row;
+                justify-content : center;
+                margin-top      : 44px;
 
                 .slideshowDot{
-                    margin: 0 12px;
-                    border: 1px solid map-get($colorPrimary ,"black");
-                    width : 10px;
-                    height: 10px;
-                    border-radius: 10px;
-                    cursor: pointer;
+                    margin          : 0 12px;
+                    border          : 1px solid map-get($colorPrimary ,"black");
+                    width           : 10px;
+                    height          : 10px;
+                    border-radius   : 10px;
+                    cursor          : pointer;
 
                     &.selected{
-                        background-color: map-get($colorPrimary ,"black");
+                        background-color    : map-get($colorPrimary ,"black");
                     }
                 }
             }
         }
-
         &__socialLink{
-            display: flex;
-            justify-content: flex-start;
-            margin-bottom: 30px;
-            padding-left: 40px;
-
-            svg{
-                margin-right: 70px;
-            }
+            margin-bottom   : 30px;
         }
 
         &-copyright{
-            transform: rotate(90deg)translateX(-50%);
-            transform-origin: bottom left;
-            position: absolute;
-            left:40px;
-            top: 50%;;
+            transform           : rotate(90deg)translateX(-50%);
+            transform-origin    : bottom left;
+            position            : absolute;
+            left                : 40px;
+            top                 : 50%;;
         }
     }
 }
 
-@media only screen and (max-width :1200px) {
+@include mobile {
     .main{
         &__container{
-            height: 640px;
+            height  : $mobile_mainHeight;
         }
         &__content{
-            padding-top: 0;
+            padding-right   : 40px;
+
             &-copyright{
-                display: none;
+                display     : none;
             }
             &__socialLink{
-                display: none;
+                display     : none;
             }
         }
     }

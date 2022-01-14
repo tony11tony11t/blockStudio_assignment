@@ -1,9 +1,7 @@
 import React from 'react'
 import './footer.styles.scss'
 import { ReactComponent as Logo } from '../../assets/logo.svg'
-import  { ReactComponent as FacebookIcon } from '../../assets/facebook.svg'
-import  { ReactComponent as InstagramIcon } from '../../assets/instagram.svg'
-import  { ReactComponent as YoutubeIcon } from '../../assets/youtube.svg'
+import SocialLink from '../socialLink/socialLink.component'
 
 export default function Footer() {
     return (
@@ -21,9 +19,7 @@ export default function Footer() {
                 3F., No.2, Ln. 80, Sec. 4, Chengde Rd., Shilin Dist., Taipei City 111, Taiwan</p>
             </div>
             <div className='footer__content__socialLink'>
-                <FacebookIcon />
-                <InstagramIcon />
-                <YoutubeIcon />
+                <SocialLink color="white"/>
             </div>
         </div>
     </div>

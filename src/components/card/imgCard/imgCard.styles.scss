@@ -2,46 +2,47 @@
 
 .imgCard{
     &__container{
-        border:1px solid map-get($colorSupport, "lightGray01" );
+        border  : 1px solid map-get($colorSupport, "lightGray01" );
     }
+
     &__content{
 
         &__img{
-            height: 300px;
-            width: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
+            height              : 300px;
+            width               : 100%;
+            background-position : center;
+            background-repeat   : no-repeat;
         }
 
         &__body{
-            display: flex;
-            flex-direction: column;
-            margin: 20px;
+            display         : flex;
+            flex-direction  : column;
+            margin          : 20px;
 
             h6{
-                margin-bottom: 20px;
+                margin-bottom   : 20px;
             }
 
             &-tag{
-                background-color: map-get($colorPrimary, "black");
-                display: inline-block;
-                color: map-get($colorPrimary, "white");
-                padding: 3px 14px;
-                border-radius: 2px;
-                width: 70px;
-                margin-bottom: 12px;
+                background-color    : map-get($colorPrimary, "black");
+                display             : inline-block;
+                color               : map-get($colorPrimary, "white");
+                padding             : 3px 14px;
+                border-radius       : 2px;
+                width               : 70px;
+                margin-bottom       : 12px;
             }
 
             &-field{
-                display: flex;
-                flex-direction: row;
+                display             : flex;
+                flex-direction      : row;
 
                 div{
-                    margin-top: 20px;
-                    flex: 1;
+                    margin-top      : 20px;
+                    flex            : 1;
 
                     .field-name{
-                        color: map-get($colorSupport, "lightGray01" );
+                        color       : map-get($colorSupport, "lightGray01" );
                     }
                 }
             }
@@ -49,32 +50,32 @@
     }
 }
 
-@media only screen and (max-width : 1200px) {
+@include mobile  {
     .imgCard{
 
         &__content{
-            display: flex;
-            flex-direction: row;
-            height: 90px;
+            display         : flex;
+            flex-direction  : row;
+            height          : 90px;
 
             &__img{
-                width: 90px;
-                height: 90px;
+                width       : 90px;
+                height      : 90px;
             }
             &__body{
-                margin: 9px 14px;
-                flex: 1;
+                margin      : 9px 14px;
+                flex        : 1;
                 &-tag{
-                    display: none;
+                    display : none;
                 }
                 p{
-                    display: none;
+                    display : none;
                 }
                 h6{
-                    margin-bottom: 0;
+                    margin-bottom : 0;
                 }
                 &-field{
-                    display: none;
+                    display : none;
                 }
             }
         }
